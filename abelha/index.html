@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Estilo Local -->
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <!-- Script Local -->
+    <script src="js/script.js" type="module" defer></script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+    <title>BEELINE</title>
+</head>
+
+<body>
+    <main class="cenario " id="cenario">
+        <!-- start -->
+
+        <header class="header">
+            <div class="wrapper-topo">
+                <div class="coluna coluna-nome-jogador">
+                    <span class="titulo">Jogador</span>
+                    <span class="texto amarelo" id="txtNomeJogador">Nome Jogador</span>
+                </div>
+
+                <img src="img/logo.png" class="img-logo">
+
+                <div class="placar">
+                    <div class="coluna">
+                        <span class="titulo">Flores</span>
+                        <span class="texto amarelo" id="txtMoedas">00</span>
+                    </div>
+                    <div class="coluna">
+                        <span class="titulo">Polen</span>
+                        <span class="texto amarelo" id="txtEstrelas">00</span>
+                    </div>
+                    <div class="coluna">
+                        <span class="titulo">Tempo</span>
+                        <span class="texto amarelo" id="txtTempo">00</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <img src="img/clouds2.png" class="img-nuvens">
+        <img src="img/clouds.png" class="img-nuvens img-nuvens2">
+        <img src="img/mario.png" class="img-mario" id="imgMario">
+        <img src="img/pipe.gif" class="img-tubo" id="imgTubo">
+        <img src="img/bullet.gif" class="img-bala" id="imgBala" style="width: 128px; height: 128px;">
+        <img src="img/New Piskel girasol.png" class="img-moeda" id="imgMoeda">
+        <img src="img/New Piskel girasol.png" class="img-moeda img-moeda2" id="imgMoeda">
+        <img src="img/New Piskel girasol.png" class="img-moeda img-moeda3" id="imgMoeda">
+        <img src="img/estrela.png" class="img-estrela" id="imgEstrela">
+        <img src="img/estrela.png" class="img-estrela img-estrela2" id="imgEstrela">
+
+        <section class="sleep " id="sleep"> <!-- active -->
+            <div class="contagem">
+                <span class="txt-sleep" id="txtSleep">5</span>
+            </div>
+
+            <div class="wrapper-regras">
+                <div class="bloco-regras">
+                    <img src="img/mario.gif" class="img-regras">
+                    <span class="texto">Use a tecla <span class="vermelho">Arrow Up</span> para pular!</span>
+                    <img src="img/teclado-up.png" alt="">
+                </div>
+                <div class="bloco-regras">
+                    <img src="img/mario-voando.gif" class="img-regras">
+                    <span class="texto">Use a tecla <span class="amarelo">Space</span> para voar!</span>
+                    <img src="img/teclado-space.png" alt="">
+                </div>
+                <div class="bloco-regras">
+                    <img src="img/mario-agachado.gif" class="img-regras">
+                    <span class="texto">Use a tecla <span class="verde">Arrow Down</span> para abaixar!</span>
+                    <img src="img/teclado-down.png" alt="">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <section class="modal habilitar" id="modal">
+        <!-- habilitar -->
+        <section class="modal-login active" id="modalLogin">
+            <!-- active -->
+            <h1 class="titulo"><span class="amarelo">Pronto</span> <span class="amarelo">para</span> <span
+                    class="amarelo">um</span> <span class="amarelo">novo</span> <span class="vermelho">desafio?</span></h1>
+
+            <input type="text" class="input-jogador" id="inputJogador" placeholder="Jogador..." onfocus="true">
+
+            <button class="btn-modal btn-start btn-red-tr" id="btnStart" disabled>Iniciar Jogo!</button>
+            <p><a href="./login/html/signin.html" style="text-decoration: none">Entrar</a>/<a href="./login/html/signup.html" style="text-decoration: none">criar conta</a></p>
+            <p><a href="./assets/index2.html" style="text-decoration: none">Publicar uma sprite</a>
+            <p class="regras">Use a telca <span class="vermelho">"Arrow UP"</span>, <span class="verde">"Arrow
+                    Down"</span> ou <span class="azul">"Space"</span> do teclado para mover a Abelha no jogo.</p>
+
+
+            <img src="img/mario3.png" class="img-mario img-mario3">
+
+        </section>
+
+        <section class="modal-game-over " id="modalGameOver">
+            <!-- active -->
+            <h1 class="titulo"> <span class="vermelho">o inseticida e o fogo </span><span class="vermelho"> pegou voce</span></h1>
+            <img src="img/game-over.gif" class="img-game-over">
+            <h1 class="titulo"> <span class="vermelho">o inseticida e o fogo </span><span class="vermelho"> sao extremamente maleficos</span></h1>
+
+            <div class="wrapper-btn">
+                <button class="btn-modal btn-red-tr btn-ranking" id="btnRanking">Ranking</button>
+                <button id="resetButton" class="">Resetar reanking</button>
+                <button class="btn-modal btn-red-tr btn-reiniciar" id="btnReiniciar">Reiniciar</button>
+            </div>
+
+            <img src="img/mario4.png" class="img-mario img-mario4">
+        </section>
+
+        <section class="modal-ranking " id="modalRanking">
+            <!-- active -->
+            <h1 class="titulo">
+                <span class="azul">r</span><span class="amarelo">a</span><span class="vermelho">n</span><span
+                    class="verde">k</span><span class="azul">i</span><span class="amarelo">n</span><span
+                    class="vermelho">g</span>
+            </h1>
+
+            <div class="wrapper-tabela">
+                <table class="tabela" border="1" id="tabela">
+                    <tr class="linha">
+                        <td class="coluna">Posicao</td>
+                        <td class="coluna">Jogador</td>
+                        <td class="coluna">Flores</td>
+                        <td class="coluna">Polen</td>
+                        <td class="coluna">Tempo</td>
+                        <td class="coluna">Pontuacao</td>
+                    </tr>
+
+                    <!-- Linha que vem do JS -->
+                    <!-- <tr class="linha">
+                        <td class="coluna">1</td>
+                        <td class="coluna">Darlan</td>
+                        <td class="coluna">5</td>
+                        <td class="coluna">2</td>
+                        <td class="coluna">30</td>
+                        <td class="coluna">50</td>
+                    </tr> -->
+
+                </table>
+            </div>
+
+            
+            <p class="regras">**Regra: Cada flor coletada vale 2 pontos, cada polen vale 5 pontos e cada segundo do
+                jogo vale 1 ponto.</p>
+
+            <button class="btn-modal btn-red-tr" id="btnReiniciar">Reiniciar</button>
+            
+            <img src="img/mario1.png" class="img-mario img-mario1">
+            <img src="img/mario2.png" class="img-mario img-mario2">
+            <script src="js/script.js" type="module" defer></script>
+        </section>
+    </section>
+
+    <!-- Áudios do jogo -->
+    <audio src="audio/" id="somAbertura"></audio>
+    <audio src="audio/" id="somAgachado"></audio>
+    <audio src="audio/audio-estrela.wav" id="somAEstrela"></audio>
+    <audio src="audio/" id="somGameOver"></audio>
+    <audio src="audio/moeda.mp3" id="somMoeda"></audio>
+    <audio src="audio/musica_morte2.wav" id="somPerdeu"></audio>
+    <audio src="audio/durante.wav" id="somPrincipal" autoplay loop> </audio>
+    <audio src="audio/audio-pulo.wav" id="somPulo"></audio>
+    <audio src="audio/durante.wav" id="somRanking"></audio>
+    <audio src="audio/audio-velocidade.wav" id="somVelocidade"></audio>
+    <audio src="audio/" id="somVoar"></audio>
+
+</body>
+
+</html>
